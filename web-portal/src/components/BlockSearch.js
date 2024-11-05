@@ -21,7 +21,10 @@ const BlockSearch = ({ apiKey }) => {
         type="text"
         placeholder="Enter Block Hash to Search"
         value={searchBlockHash}
-        onChange={(e) => setSearchBlockHash(e.target.value)}
+        onChange={(e) => {
+          setSearchBlockHash(e.target.value);
+          setCurrentBlockHash('');
+        }}
         style={{ padding: '10px', width: '70%', marginRight: '10px' }}
       />
       <button onClick={handleSearch} style={{ padding: '10px' }}>Search</button>

@@ -4,6 +4,7 @@ import Login from './components/Login';
 import Welcome from './components/Welcome';
 import UserData from './components/UserData';
 import ProtectedRoute from './components/ProtectedRoute';
+import NavigationBar from './components/NavigationBar';
 import { AuthProvider } from './context/AuthContext';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import React from 'react';
@@ -13,6 +14,7 @@ function App() {
     <Router>
       <AuthProvider>
         <div className='App'>
+          <NavigationBar />
           <Routes>
             <Route path='/' element={<Login />} />
             <Route 
